@@ -1,3 +1,5 @@
+package com.github.jkschneider.netty.jssc;
+
 import java.net.SocketAddress;
 
 /**

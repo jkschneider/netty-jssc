@@ -1,3 +1,5 @@
+package com.github.jkschneider.netty.jssc;
+
 import static com.github.jkschneider.netty.jssc.JsscChannelOption.*;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.channel.ChannelOption;

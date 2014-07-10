@@ -1,3 +1,5 @@
+package com.github.jkschneider.netty.jssc;
+
 import static com.github.jkschneider.netty.jssc.JsscChannelOption.BAUD_RATE;
 import static com.github.jkschneider.netty.jssc.JsscChannelOption.DATA_BITS;
 import static com.github.jkschneider.netty.jssc.JsscChannelOption.DTR;

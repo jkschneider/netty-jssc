@@ -1,3 +1,5 @@
+package com.github.jkschneider.netty.jssc;
+
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.channel.ChannelConfig;
 import io.netty.channel.MessageSizeEstimator;

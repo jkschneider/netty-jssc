@@ -1,3 +1,5 @@
+package com.github.jkschneider.netty.jssc;
+
 import io.netty.channel.ChannelOption;
 
 /**
