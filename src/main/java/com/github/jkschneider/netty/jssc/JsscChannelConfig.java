@@ -13,21 +13,21 @@ import io.netty.channel.RecvByteBufAllocator;
  * In addition to the options provided by {@link ChannelConfig},
  * {@link DefaultJsscChannelConfig} allows the following options in the option map:
  *
- * <table border="1" cellspacing="0" cellpadding="6">
+ * <table border="1" cellspacing="0" cellpadding="6" summary="">
  * <tr>
  * <th>Name</th><th>Associated setter method</th>
  * </tr><tr>
- * <td>{@link JsscChannelOption#BAUD_RATE}</td><td>{@link #setBaudrate(int)}</td>
+ * <td>{@link JsscChannelOption#BAUD_RATE}</td><td>{@link #setBaudrate(Integer)}</td>
  * </tr><tr>
  * <td>{@link JsscChannelOption#DTR}</td><td>{@link #setDtr(boolean)}</td>
  * </tr><tr>
  * <td>{@link JsscChannelOption#RTS}</td><td>{@link #setRts(boolean)}</td>
  * </tr><tr>
- * <td>{@link JsscChannelOption#STOP_BITS}</td><td>{@link #setStopbits(Stopbits)}</td>
+ * <td>{@link JsscChannelOption#STOP_BITS}</td><td>{@link #setStopbits(Integer)}</td>
  * </tr><tr>
- * <td>{@link JsscChannelOption#DATA_BITS}</td><td>{@link #setDatabits(Databits)}</td>
+ * <td>{@link JsscChannelOption#DATA_BITS}</td><td>{@link #setDatabits(Integer)}</td>
  * </tr><tr>
- * <td>{@link JsscChannelOption#PARITY_BIT}</td><td>{@link #setParitybit(Paritybit)}</td>
+ * <td>{@link JsscChannelOption#PARITY_BIT}</td><td>{@link #setParitybit(Integer)}</td>
  * </tr>
  * </table>
  */
@@ -46,6 +46,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      * serial device in synchronising with the data.
      *
      * @param stopbits The number of stop bits to use
+     * @return the channel config
      */
     JsscChannelConfig setStopbits(Integer stopbits);
 
@@ -54,6 +55,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      * device.
      *
      * @param databits The number of data bits to use
+     * @return the channel config
      */
     JsscChannelConfig setDatabits(Integer databits);
 
@@ -61,6 +63,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      * Sets the type of parity bit to be used when communicating with the serial device.
      *
      * @param paritybit The type of parity bit to be used
+     * @return the channel config
      */
     JsscChannelConfig setParitybit(Integer paritybit);
 
@@ -94,6 +97,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      * flow control
      *
      * @param dtr true if DTR is supported, false otherwise
+     * @return the channel config
      */
     JsscChannelConfig setDtr(boolean dtr);
 
@@ -107,6 +111,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      * control
      *
      * @param rts true if RTS is supported, false otherwise
+     * @return the channel config
      */
     JsscChannelConfig setRts(boolean rts);
 
@@ -123,7 +128,7 @@ public interface JsscChannelConfig extends ChannelConfig {
      *
      * @param waitTimeMillis The number of milliseconds to wait, defaulting to 0 (no
      *     wait) if unset
-     * @throws IllegalArgumentException if the supplied value is < 0
+     * @return the channel config
      */
     JsscChannelConfig setWaitTimeMillis(int waitTimeMillis);
 
