@@ -87,9 +87,11 @@ public class JsscChannel extends OioByteStreamChannel {
 					try {
 						writeStream.write(serialPort.readBytes(event.getEventValue()));
 						writeStream.flush();
-					} catch (SerialPortException | IOException e) {
+					} catch (SerialPortException e) {
 						throw new IllegalStateException(e);
-					}
+					} catch (IOException e) {
+                        throw new IllegalStateException(e);
+                    }
 				}
 			}
 		});
